@@ -5,26 +5,24 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import react from 'react';
 export default function Navbar() {
-  const pathname = usePathname();
-  const [isOpen, setIsOpen] = useState(false);
+   const pathname = usePathname();
+   const [isOpen, setIsOpen] = useState(false);
 
-  const navLinks = [
-    { name: "Home", path: "#home" },
-    { name: "About", path: "#about" },
-    { name: "Service", path: "/service" },
-    { name: "Contact", path: "/contact" },
-  ];
-
+   const navLinks = [
+     { name: "Home", path: "/home" },
+     { name: "About", path: "/about" },
+     { name: "Service", path: "/service" },
+     { name: "Contact", path: "/contact" },
+   ];
+  
   return (
-    <nav className=" bg-gray-900 text-white shadow-md">
+    <nav className="fixed top-0 w-full bg-gray-900/80 backdrop-blur border-b border-gray-700 z-50">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         
-        {/* Logo */}
         <Link href="/" className="text-2xl font-bold text-blue-500">
           MyWebsite
         </Link>
 
-        {/* Desktop Menu */}
         <ul className="hidden md:flex gap-8">
           {navLinks.map((link) => (
             <li key={link.path}>
@@ -42,7 +40,6 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Mobile Button */}
         <button
           className="md:hidden text-2xl"
           onClick={() => setIsOpen(!isOpen)}
@@ -51,7 +48,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <ul className="md:hidden bg-gray-800 px-6 pb-4 space-y-3">
           {navLinks.map((link) => (

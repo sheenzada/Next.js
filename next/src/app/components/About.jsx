@@ -1,6 +1,6 @@
 export default function AboutPage() {
   return (
-    <div id="home" className="min-h-screen bg-gray-100 flex items-center justify-center px-6">
+    <div id="/home" className="min-h-screen bg-gray-100 flex items-center justify-center px-6">
       <div className="max-w-3xl bg-white shadow-lg rounded-2xl p-10">
         <h1 className="text-4xl font-bold text-blue-600 mb-6 text-center">
           About Us

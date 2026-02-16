@@ -4,10 +4,9 @@ import profilePic from "./inam-2.jpg";
 export default function HomePage() {
   return (
     <div
-      id="about"
+      id="/about"
       className="min-h-screen bg-blue-400 from-blue-500 to-purple-600 flex flex-col md:flex-row items-center justify-center px-6 gap-12"
     >
-      {/* Image Section */}
       <div className="w-60 h-60 flex">
         <Image
           src={profilePic}
@@ -16,7 +15,6 @@ export default function HomePage() {
         />
       </div>
 
-      {/* Text Section */}
       <div className="text-center md:text-left text-white max-w-2xl">
         <h1 className="text-5xl font-bold mb-6">
           Welcome to My Website
