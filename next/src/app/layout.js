@@ -32,13 +32,15 @@ import "./globals.css";
 import Navbar from './components/Navbar'
 import About from './components/About'
 import Home from './components/Home'
+import Question from './components/Question'
 export default function RootLayout({ children}) {
   return (
     <html lang="en">
       <body>
-        <Navbar />
+        {/* <Navbar />
         <Home/>
-        <About/>
+        <About/> */}
+        <Question/>
         {children}
       </body>
     </html>
